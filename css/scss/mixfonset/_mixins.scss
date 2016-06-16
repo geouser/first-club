@@ -20,10 +20,15 @@
     display: inline-block;
     vertical-align: middle;
     height: 100%; width: 0;
-    margin-right: 0; 
+    margin: 0 -2px; 
   }
 }
 
+
+@mixin filter($arg) {
+    -webkit-filter: $arg;
+    filter: $arg;
+}
 
 
 /* -------------- position ---------- */
