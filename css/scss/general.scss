@@ -37,11 +37,11 @@ CSS tooltip-----------  @include tooltiptooltip($content: attr(data-tooltip), $d
 /*  HEADER STYLES  */ 
          
 header {
-    @include position(absolute, 0, auto, auto, 0);
+    @include position(absolute, 20px, auto, auto, 0);
     width: 100%;
     z-index: 100;
-    background: #fff;
     margin: 0;
+    color: #FFF;
     @include transition(all, .4s);
     
         /*.................media.............*/
@@ -62,28 +62,9 @@ header {
             }
         }
         /*.............end media..............*/
-
-
-    .header__top {
-        padding: 7px 0;
-        color: #FFF;
-        .wrapper {
-            @include flex();
-        }
-        .divide {
-            height: 35px;
-            width: 1px;
-            vertical-align: middle;
-            background-color: #1E5D75;
-        }
-    }
-    
-    .header__bottom {
-        padding: 30px 0;
-        background-color: #fff;
-        .wrapper {
-            @include flex();
-        }
+        
+    .wrapper {
+         @include flex();
     }
 }
 
@@ -92,33 +73,15 @@ header {
 /*  LOGO STYLES  */
 
 .logo {
-    position: relative;
-    display: block;
-    & img {
-        height: 100%;
-        display: inline-block;
-        vertical-align: middle;   
-    }
-    & p {
-        display: inline-block;
-        vertical-align: middle;
-        padding-left: 18px;
-        text-transform: uppercase;
-        text-align: left;
-        padding-top: 6px;
-        span{
-         display: inline-block;
-        }
-        strong {
-            color: #000;
-            text-transform: none;
-            display: block;
-            margin-top: 5px;
-            padding-left: 2px;
-        }
-    }
+    margin-right: 20px;
 }
 
+.tel {
+    display: block;
+    font: 19px $d;
+    margin-bottom: 20px;
+    color: #FFF;
+}
 
 /* ------------------------------------ */
 /*  NAV STYLES  */
@@ -128,10 +91,20 @@ nav ul {
     list-style-type: none;
     a {
         display: inline-block;
-        margin: 0 20px;
+        padding: 0 14px;
+        height: 35px;
+        font: 14px/35px $cb;  
+        color: #FFF;      
         text-decoration: none;
+        overflow: hidden;
+        -webkit-background-size: 100% 100%;
+             -o-background-size: 100% 100%;
+                background-size: 100% 100%;
         @include transition(all, .2s);             
         &:hover {}
+        &.active {   
+            background-image: url('../images/button--top_menu.png');     
+        }
     }
 
         /*.................media.............*/
@@ -141,7 +114,6 @@ nav ul {
             overflow: scroll;
             position: relative;
             li a  {   
-                margin: 0 0 25px 0;
                 &.active {color: #ECCC1D;}
                 &:hover  {background: transparent;}
             } 
@@ -203,23 +175,59 @@ nav ul {
 
 
 .offer {
-    height: 100%;
-    min-height: 650px;
-    max-height: 900px;
-    background: url('../images/law.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 200px 0 0 0;
+    height: 680px;
+    background: url('../images/offer.jpg') no-repeat center center;
+    padding: 160px 0 0 0;
     position: relative;
+}
 
-
-    .offerInfo {
-        height: 100%;
-        @include flex($alignI: center, $justify: space-around, $direction: column);
-        z-index: 2;
-        position: relative;
-        text-align: center;
+.offer__slider {
+    width: 100%;
+    height: 100%;
+    &__slide {
+        text-align: right;
+        &:before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+        }
+        &__info {
+            width: 680px;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            h2 {
+                font: 60px/60px $g;
+                color: $yellow;
+                text-shadow: 2.828px 2.828px 0px rgba( 0, 0, 0, 1 );
+            }
+            .offer__slider__quote {
+                display: block;
+                font: 44px/45px $g;
+                text-shadow: 2.121px 2.121px 0px rgba( 0, 0, 0, 1 );
+                color: $blue;
+                width: 270px;
+                height: 220px;
+                background-image: url("../images/tip.png");
+                background-size: 100% 100%;
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                    text-align: left;
+                }
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 100%;
+                }
+            }
+            .button {
+                margin-top: 35px;
+            }
+        }
     }
-
 }
 
 

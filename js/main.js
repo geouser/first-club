@@ -63,5 +63,13 @@ jQuery(document).ready(function($) {
     });
 
 
+     /*---------------------------
+                                  Slick slider
+    ---------------------------*/
+    $('.offer__slider').slick({
+        dots: false,
+        fade: true
+    });
+
 
 }); // end file
