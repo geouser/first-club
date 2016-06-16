@@ -37,11 +37,11 @@ CSS tooltip-----------  @include tooltiptooltip($content: attr(data-tooltip), $d
 /*  HEADER STYLES  */ 
          
 header {
-    @include position(absolute, 0, auto, auto, 0);
+    @include position(absolute, 20px, auto, auto, 0);
     width: 100%;
     z-index: 100;
-    background: #fff;
     margin: 0;
+    color: #FFF;
     @include transition(all, .4s);
     
         /*.................media.............*/
@@ -73,11 +73,14 @@ header {
 /*  LOGO STYLES  */
 
 .logo {
+    margin-right: 20px;
 }
 
 .tel {
     display: block;
     font: 19px $d;
+    margin-bottom: 20px;
+    color: #FFF;
 }
 
 /* ------------------------------------ */
@@ -90,7 +93,8 @@ nav ul {
         display: inline-block;
         padding: 0 14px;
         height: 35px;
-        font: 14px/35px $cb;        
+        font: 14px/35px $cb;  
+        color: #FFF;      
         text-decoration: none;
         overflow: hidden;
         -webkit-background-size: 100% 100%;
@@ -172,8 +176,7 @@ nav ul {
 
 .offer {
     height: 680px;
-    background: url('../images/law.jpg') no-repeat center center;
-    background-size: cover;
+    background: url('../images/offer.jpg') no-repeat center center;
     padding: 160px 0 0 0;
     position: relative;
 }
@@ -206,7 +209,7 @@ nav ul {
                 color: $blue;
                 width: 270px;
                 height: 220px;
-                background-image: url("");
+                background-image: url("../images/tip.png");
                 background-size: 100% 100%;
                 span {
                     display: inline-block;
@@ -261,3 +264,4 @@ nav ul {
 
 
 @import 'footer';
+@import 'sign-up';
