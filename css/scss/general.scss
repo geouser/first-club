@@ -36,6 +36,10 @@ p {
    text-align: left;
    margin-bottom: 25px;
 }
+h2 {
+    font: 55px/60px $g;
+    color: $yellow;
+}
 
 
 /*=====================================================================================*/
@@ -299,35 +303,30 @@ nav ul {
 
 
 /*=====================================================================================*/
-/*  STYLES  */ 
+/*  PROGRAMS  */ 
 
-
-.infoBlocks {
-    @include flex($alignI: top, $justify: center, $wrap: wrap);
-      
-    .infoBlock  {
-        margin-bottom: 20px;
-        padding: 0 20px;
-        text-align: center;
-        border: 1px solid peru;
-        &_icon {
-            width: 150px;
-            height: 150px;
-            text-align: center;
-            margin: 10px auto 15px;
-            }
-        }
-
-    &.--two  .infoBlock   {    width: 50%;}
-    &.--four .infoBlock   {    width: 25%;}
-    &.--three .infoBlock  {    width: 33%;}
+.chooseProgram {
+    
 }
 
-
-
-
-
-
+.programs {
+    @include flex($alignI: top, $wrap: wrap);
+    &__item {
+        width: 170px;
+        height: 115px;
+        padding-top: 25px;
+        &:before {
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+            content: "";
+        }
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
 
 @import 'footer';
 @import 'sign-up';
