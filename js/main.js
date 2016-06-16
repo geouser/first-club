@@ -1,3 +1,4 @@
+
 // Global parameters
 window.params = {
     widthFull: 750,
@@ -70,6 +71,25 @@ jQuery(document).ready(function($) {
         dots: false,
         fade: true
     });
+    
+    $('.slider').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        lazyLoad: 'ondemand'
+    });
+    
+    $('.gallery-prev').on('click', function (e){
+        e.preventDefault;
+        $('.slider').slick('slickPrev');
+    });
+    
+    $('.gallery-next').on('click', function (e){
+        e.preventDefault;
+        $('.slider').slick('slickNext');
+    })
+    
 
 
 }); // end file

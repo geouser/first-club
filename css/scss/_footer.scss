@@ -1,0 +1,10 @@
+.footer {
+    @extend header;
+    position: static;
+    padding: 25px 0;
+    color: #000;
+    
+    nav ul a {
+        color: #000;
+    }
+}
