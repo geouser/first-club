@@ -1,0 +1,91 @@
+.button {
+	display: inline-block;
+	vertical-align: middle;
+	background: url('../images/buttons.png') no-repeat;
+	overflow: hidden;
+	text-align: center;
+	border: 0;
+}
+ 
+.button-abonement {
+	background-position: -5px -0px;
+	width: 409px;
+	height: 78px;
+	font-family: $d;
+	color: #fff;
+	font-size: 18px;
+}
+.button-shedule {
+	background-position: -5px -83px;
+	width: 409px;
+	height: 78px;
+	font-family: $d;
+	color: #000;
+	font-size: 18px;
+}
+.button-sign-in {
+	background-position: -5px -166px;
+	width: 295px;
+	height: 78px;
+	font-family: $d;
+	color: #fff;
+	font-size: 15px;
+}
+.cover-left 				{ background-position: -5px -249px; width: 271px; height: 91px; }
+.button-order-slider {
+	background-position: -5px -345px;
+	width: 229px;
+	height: 64px;
+	font-family: $d;
+	font-size: 15px;
+	padding-bottom: 8px;
+}
+
+.button-more {
+	background-position: -5px -467px;
+	width: 209px;
+	height: 47px;
+	color: #000;
+	font-family: $d;
+	font-size: 15px;
+	padding-bottom: 4px;
+}
+.button-more:hover {
+	background-position: -5px -414px;
+}
+.button-order-bottom-menu {
+	background-position: -5px -519px;
+	width: 198px;
+	height: 53px;
+	color: #000;
+	font-family: $d;
+	font-size: 14px;
+	padding-bottom: 8px;
+}
+.button-order-top-menu {
+	background-position: -208px -519px;
+	width: 198px;
+	height: 53px;
+	color: #fff;
+	font-family: $d;
+	font-size: 14px;
+	padding-bottom: 8px;
+}
+.button-write {
+	background-position: -219px -414px;
+	width: 186px;
+	height: 48px;
+	color: #2d74a8;
+	font-family: $cb;
+	font-size: 16px;
+	padding-bottom: 4px;
+}
+.button-top-menu {
+	background-position: -305px -166px;
+	width: 87px;
+	height: 35px;
+	font-size: 14px;
+	font-family: $c;
+	color: #fff;
+	line-height: 35px;
+}
