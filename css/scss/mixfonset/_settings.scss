@@ -1,35 +1,52 @@
 // COLORS
 // ---------------------------
-
+$yellow:		#fdf630;
+$blue:			#7ac4ff;
+$red:			#f75d60;
 
 // FONTS
 // ---------------------------
+$c:				'Consolas';
+$ci:			'Consolas-italic';
+$cb:			'Consolas-bold';
+$cbi:			'Consolas-bold-italic';
 
+$g:				'Gagalin';
+
+$d:				'Days';
 
 
 // RESPONSIVE
 // ---------------------------
-
+$tablets:		'max-width: 1000px';
+$phones:		'max-width: 750px';
 
 
 // TYPOGRAPHIC
 // ---------------------------
-html, body                    	{   height: 100%;}
-p                             	{   }
-h1, h2, h3, h4, h5, p         	{   }
-.white                          {	color: #FFF;}
+html,
+body {
+	height: 100%;
+}
+body {
+	font-family: $c;
+	font-size: 14px;
+}
+h1,
+h2 {
+	font-family: $g;
+}
+.white {
+	color: #FFF;
+}
 
 
 
 
 // lAYOUT
 // ---------------------------
-
-.wrapper                      	{   width: 1200px;
-								   	margin: 0 auto;
-                                   	text-align: center;
-                              	}
-header 							{}
-aside 							{}
-main 							{}
-footer 							{}
+.wrapper {
+	width: 990px;
+	margin: 0 auto;
+	text-align: center;
+}
