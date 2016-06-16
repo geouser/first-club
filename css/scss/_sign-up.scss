@@ -3,7 +3,13 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    padding: 100px 0 70px;
+    overflow: hidden;
+    
+    .wrapper {
+        position: relative;
+        padding: 70px 0;
+        z-index: 1;
+    }
     
     .places {
         width: 280px;
@@ -28,7 +34,10 @@
                 font-size: 43.6px;
                 font-family: $g;
                 color: $blue;
-                text-shadow: 2px 2px 0 #000;                
+                text-shadow: 2px 2px 0 #000;
+                text-align: center;
+                line-height: normal;
+                margin-bottom: 0;
             }
         }
         
@@ -49,6 +58,9 @@
                 font-size: 14px;
                 text-transform: uppercase;
                 color: #fff;
+                text-align: center;
+                line-height: normal;
+                margin-bottom: 0;
                 
                 span {
                     font-family: $g;
@@ -80,5 +92,12 @@
         .button {
             margin-left: 47px;
         }
+    }
+    
+    .superman {
+        position: absolute;
+        bottom: 0;
+        right: -163px;
+        z-index: -1;
     }
 }

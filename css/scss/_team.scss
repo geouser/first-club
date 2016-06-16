@@ -1,0 +1,73 @@
+.team {
+    padding-top: 27px;
+    
+    h2 {
+        color: $yellow;
+        font-size: 55px;
+        margin-bottom: 15px;
+    }
+    
+    p {
+        text-align: center;
+    }
+    
+    &_box {
+        padding-top: 50px;
+        @include flex($alignI: flex-start);
+        
+        .item {
+            width: 186px;
+            
+            .image {
+                position: relative;
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+                
+                &:before {
+                    content: '';
+                    width: 100%;
+                    padding-bottom: 100%;
+                    display: block
+                }
+                
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    @include transform(translate(-50%, -50%));
+                }
+            }
+            
+            .name {
+                font-size: 16px;
+                font-family: $d;
+                text-transform: uppercase;
+                margin-top: 20px;
+                margin-bottom: 8px;
+            }
+            
+            .role {
+                margin-bottom: 15px;
+            }
+            
+            .button {
+                i {
+                    background-image: url(../images/vk.png);
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+                    width: 26px;
+                    height: 16px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 15px;
+                }
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
