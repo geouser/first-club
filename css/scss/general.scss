@@ -216,7 +216,7 @@ nav ul {
         position: relative !important;
         text-align: right;
         img {
-            @include position(absolute, auto, auto, -170px, 0);
+            @include position(absolute, auto, auto, -85px, 0);
             z-index: 1;
         }
         &:nth-of-type(1) img {
@@ -226,7 +226,7 @@ nav ul {
             
         }
         &:nth-of-type(3) img {
-            
+            @include position(absolute, auto, auto, -100px, -77px);
         }
         &__info {
             min-width: 520px;
@@ -256,11 +256,12 @@ nav ul {
                 margin-left: 0px;
                 background-repeat: no-repeat;
                 margin-top: -8px;
-                background-position: 32px 6px;
+                background-position: 0px 6px;
                 span {
                     display: inline-block;
                     vertical-align: middle;
                     text-align: left;
+                    padding-left: 10px;
                 }
                 &:before {
                     content: "";
@@ -271,6 +272,12 @@ nav ul {
             }
             .button {
                 margin-top: 20px;
+            }
+        }
+        &:nth-of-type(2),
+        &:nth-of-type(3)  {
+            .offer__slider__quote {
+                margin: -8px auto 0;
             }
         }
     }
