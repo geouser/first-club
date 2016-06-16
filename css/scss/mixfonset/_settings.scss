@@ -1,7 +1,7 @@
 // COLORS
 // ---------------------------
-$yellow:		#fdf630;
-$blue:			#7ac4ff;
+$yellow:		#FFF600;
+$blue:			#00AAFF;
 $red:			#f75d60;
 
 // FONTS
@@ -35,6 +35,8 @@ body {
 h1,
 h2 {
 	font-family: $g;
+    text-shadow: 2px 2px 0 #000;
+    font-weight: normal;
 }
 .white {
 	color: #FFF;

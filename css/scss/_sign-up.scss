@@ -1,0 +1,84 @@
+.sign_up {
+    background-image: url(../images/sign_up.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    padding: 100px 0 70px;
+    
+    .places {
+        width: 280px;
+        display: inline-block;
+        vertical-align: top;
+        
+        .citate {
+            width: 257px;
+            height: 192px;
+            background-image: url(../images/tip.png);
+            background-size: 100%;
+            margin-left: -30px;
+            padding-left: 30px;
+            text-align: center;
+            padding-bottom: 20px;
+            @extend %vertAlign;
+            
+            p {
+                display: inline-block;
+                vertical-align: middle;
+                width: 95%;
+                font-size: 43.6px;
+                font-family: $g;
+                color: $blue;
+                text-shadow: 2px 2px 0 #000;                
+            }
+        }
+        
+        .left {
+            background: url('../images/buttons.png') no-repeat;
+            background-position: -5px -249px;
+            width: 271px;
+            height: 91px;
+            margin-top: 15px;
+            margin-right: 0;
+            @extend %vertAlign;
+            
+            p {
+                display: inline-block;
+                vertical-align: middle;
+                width: 95%;
+                font-family: $d;
+                font-size: 14px;
+                text-transform: uppercase;
+                color: #fff;
+                
+                span {
+                    font-family: $g;
+                    font-size: 40px;
+                    color: $yellow;
+                    text-shadow: 2px 2px 0 #000;
+                    line-height: 40px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    
+    .inscribe_in {
+        width: calc(100% - 290px);
+        display: inline-block;
+        vertical-align: middle;
+        text-align-last: top;
+        text-align: left;
+        padding-top: 30px;
+        
+        h2 {
+            font-size: 55px;
+            color: $yellow;
+            line-height: 60px;
+            margin-bottom: 64px;
+        }
+        
+        .button {
+            margin-left: 47px;
+        }
+    }
+}
