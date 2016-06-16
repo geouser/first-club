@@ -75,6 +75,10 @@ header {
 .logo {
 }
 
+.tel {
+    display: block;
+    font: 19px $d;
+}
 
 /* ------------------------------------ */
 /*  NAV STYLES  */
@@ -84,10 +88,19 @@ nav ul {
     list-style-type: none;
     a {
         display: inline-block;
-        margin: 0 20px;
+        padding: 0 14px;
+        height: 35px;
+        font: 14px/35px $cb;        
         text-decoration: none;
+        overflow: hidden;
+        -webkit-background-size: 100% 100%;
+             -o-background-size: 100% 100%;
+                background-size: 100% 100%;
         @include transition(all, .2s);             
         &:hover {}
+        &.active {   
+            background-image: url('../images/button--top_menu.png');     
+        }
     }
 
         /*.................media.............*/
@@ -97,7 +110,6 @@ nav ul {
             overflow: scroll;
             position: relative;
             li a  {   
-                margin: 0 0 25px 0;
                 &.active {color: #ECCC1D;}
                 &:hover  {background: transparent;}
             } 
@@ -181,6 +193,7 @@ nav ul {
             width: 680px;
             display: inline-block;
             vertical-align: middle;
+            text-align: center;
             h2 {
                 font: 60px/60px $g;
                 color: $yellow;
@@ -206,6 +219,9 @@ nav ul {
                     vertical-align: middle;
                     height: 100%;
                 }
+            }
+            .button {
+                margin-top: 35px;
             }
         }
     }
