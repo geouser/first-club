@@ -7,6 +7,10 @@
         margin-bottom: 15px;
     }
     
+    p {
+        text-align: center;
+    }
+    
     &_box {
         padding-top: 50px;
         @include flex($alignI: flex-start);

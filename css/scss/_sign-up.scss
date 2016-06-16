@@ -34,7 +34,10 @@
                 font-size: 43.6px;
                 font-family: $g;
                 color: $blue;
-                text-shadow: 2px 2px 0 #000;                
+                text-shadow: 2px 2px 0 #000;
+                text-align: center;
+                line-height: normal;
+                margin-bottom: 0;
             }
         }
         
@@ -55,6 +58,9 @@
                 font-size: 14px;
                 text-transform: uppercase;
                 color: #fff;
+                text-align: center;
+                line-height: normal;
+                margin-bottom: 0;
                 
                 span {
                     font-family: $g;
