@@ -35,10 +35,33 @@ p {
    font: 14px/25px $c; 
    text-align: left;
    margin-bottom: 25px;
+   /*.................media.............*/
+    @include m600 {
+       font-size: 13px;
+       line-height: 20px;
+    }
+    /*.............end media..............*/
 }
 h2 {
     font: 55px/60px $g;
     color: $yellow;
+    /*.................media.............*/
+    @include m900 {
+       font: 50px/55px $g;
+    }
+    @include m600 {
+       font: 45px/50px $g;
+    }
+    @include m500 {
+       font: 40px/45px $g;
+    }
+    @include m400 {
+       font: 35px/40px $g;
+    }
+    @include m360 {
+       font: 30px/35px $g;
+    }
+    /*.............end media..............*/
 }
 
 
@@ -410,11 +433,28 @@ nav ul {
 .whoWhom {
     margin-top: 115px;
     @include flex($alignI: top);
-    background-image: url("../images/5.png");
     background-repeat: no-repeat;
     background-position: 50% 100%;
     padding-bottom: 70px;
     position: relative;
+    /*.................media.............*/
+    @media (min-width: 600px) {
+        background-image: url("../images/5.png");
+    }
+    @include m1000 {
+        background-position: 100% 100%;
+        margin-top: 40px;
+        padding-bottom: 0;
+       -webkit-flex-direction: column;
+           -ms-flex-direction: column;
+               flex-direction: column;
+    }
+    @media (max-width: 600px) {
+        margin-top: 170px;
+        display: block;
+        text-align: center;
+    }
+    /*.............end media..............*/
     .before {
         display: block;
         width: 300px;
@@ -432,17 +472,55 @@ nav ul {
         top: -86px;
         padding-top: 15px;
         text-shadow: 2.121px 2.121px 0px rgb( 0, 0, 0 );
+        /*.................media.............*/
+        @include m1000 {
+            padding-top: 10px;
+            width: 260px;
+            height: 110px;
+            font-size: 45px;
+            left: auto;
+            bottom: 60px;
+            right: 40px;
+        }
+        @media (max-width: 600px) {
+           bottom: auto;
+           top: -120px;
+           left: 0;
+           right: 0;
+           margin: auto;
+        }
+        /*.............end media..............*/
     }
     &__item {
         width: 340px;
+        display: inline-block;
+         /*.................media.............*/
+        @include m1000 {
+            margin-bottom: 40px;
+        }
+        /*.............end media..............*/
         h3 {
             font: 45px/60px $g;
             margin-bottom: 10px;
             text-align: left;
+             /*.................media.............*/
+            @include m600 {
+                font: 35px/45px $g;
+            }
+            /*.............end media..............*/
         }
         p {
             padding-right: 20px;
             min-height: 150px;
+             /*.................media.............*/
+            @include m900 {
+                text-shadow: 1px 0 0px #fff, -1px 0 0px #fff, 0px -1px 0px #fff, 0px -1px 0px #fff;
+                min-height: 0;
+            }
+            /*.............end media..............*/
+        }
+        @media (max-width: 400px) {
+           width: 100%;
         }
     }
 }
