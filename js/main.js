@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
     ---------------------------*/
     $(function() { 
       var $document = $(document),
-          $element = $('nav'),
+          $element = $('header nav'),
           className = 'hasScrolled';
 
       $document.scroll(function() {

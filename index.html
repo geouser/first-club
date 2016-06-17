@@ -49,7 +49,7 @@
                 </nav><!-- end nav -->
                 <div>
                     <a href="tel:+8 (493) 234 38 96" class="tel">+8 (493) 234 38 96</a>
-                    <button class="button button-order-top-menu">
+                    <button class="button button-order-top-menu magnific" href="#modal-popup">
                         Заказать звонок
                     </button>
                 </div>
@@ -76,7 +76,7 @@
                         <div class="offer__slider__slide__info">
                             <p class="offer__slider__quote"><span>Первый <br><i></i>в Иваново</span></p>
                             <h2><span>профессиональный</span>детский фитнес-клуб</h2>
-                            <button class="button button-order-slider">Оставить заявку</button>
+                            <button class="button button-order-slider magnific" href="#modal-popup">Оставить заявку</button>
                         </div>
                     </div>
 
@@ -85,7 +85,7 @@
                         <div class="offer__slider__slide__info">
                             <p class="offer__slider__quote"><span>Закажите <br> <i></i>Абонемент</span></p>
                             <h2><span>Любые групповые уроки </span>в рамках одного абонемента</h2>
-                            <button class="button button-order-slider">Оставить заявку</button>
+                            <button class="button button-order-slider magnific" href="#modal-popup">Оставить заявку</button>
                         </div>
                     </div>
 
@@ -94,7 +94,7 @@
                         <div class="offer__slider__slide__info">
                             <p class="offer__slider__quote"><span>Ждём вас <br><i></i>В Сентябре!</span></p>
                             <h2><span>Открыта предпродажа</span> по сниженным ценам</h2>
-                            <button class="button button-order-slider">Оставить заявку</button>
+                            <button class="button button-order-slider magnific" href="#modal-popup">Оставить заявку</button>
                         </div>
                     </div>
                 </div><!-- end offer__slider -->   
@@ -117,7 +117,7 @@
                     <div class="whoWhom__item">
                         <h3>Для мальчиков</h3>
                         <p>Новые горизонты, яркие эмоции, интересные занятия, которые развивают тело и закаляют характер. Пусть ваш мальчишка будет лучшим среди равных и равным среди лучших!</p>
-                        <button class="button button-more">Узнать подробности</button>
+                        <button class="button button-more magnific" href="#modal-popup">Узнать подробности</button>
                     </div>
                     <div class="before">
                         до 18 лет.
@@ -125,7 +125,7 @@
                     <div class="whoWhom__item">
                         <h3>Для девочек</h3>
                         <p>Хорошая осанка, прекрасное самочувствие, умение красиво двигаться – ценные приобретения для каждой девочки. Стеснительные особы смогут раскрыться, уверенные в себе личности станут центром внимания в любой компании!</p>
-                        <button class="button button-more">Узнать подробности</button>
+                        <button class="button button-more magnific" href="#modal-popup">Узнать подробности</button>
                     </div>
                 </div>
             </div>
@@ -647,6 +647,7 @@
                     </div>
 
                     <!--=============================== 21:00 =====================================-->
+
                     <div class="cellsBlock">
                         <div class="row day7">
                             <div class="cell label">21:00</div>
@@ -747,7 +748,7 @@
                     <p>Количество мест ограничено. Открыта перепродажа на сентябрь. Успейте купить свой абонемент!</p>
                 </div>
                 
-                <button class="button button-abonement">Купить абонемент прямо сейчас</button>
+                <button class="button button-abonement magnific" href="#modal-popup">Купить абонемент прямо сейчас</button>
                 
                 <img src="images/6.png" alt="Ironman" class="ironman">
                 <img src="images/10.png" alt="Spiderman" class="spiderman">
@@ -835,7 +836,7 @@
                 
                 <div class="inscribe_in">
                     <h2>Запишитесь к нам <br>прямо сейчас</h2>
-                    <button class="button button-sign-in">Записаться в FIRST CLUB</button>
+                    <button class="button button-sign-in magnific" href="#modal-popup">Записаться в FIRST CLUB</button>
                 </div>
                 
                 <img src="images/7.png" alt="Super Man" class="superman">
@@ -852,26 +853,26 @@
                 </div>
                 <nav><!-- start nav -->
                     <ul>
-                        <li><a href="index.html" class="active">
+                         <li><a href="#offer">
                             Главная
                         </a></li>
-                        <li><a href="portfolio.html">
+                        <li><a href="#services">
                             Услуги
                         </a></li>
-                        <li><a href="apps.html">
+                        <li><a href="#schedule">
                             Расписание
                         </a></li>
-                        <li><a href="promotion.html">
+                        <li><a href="#benefits">
                             Выгоды
                         </a></li>
-                        <li><a href="#">
+                        <li><a href="#team">
                             Наша команда
                         </a></li>
                     </ul>
                 </nav><!-- end nav -->
                 <div>
                     <a href="tel:+8 (493) 234 38 96" class="tel">+8 (493) 234 38 96</a>
-                    <button class="button button-order-bottom-menu">
+                    <button class="button button-order-bottom-menu magnific" href="#modal-popup">
                         Заказать звонок
                     </button>
                 </div>
@@ -889,7 +890,16 @@
         <button class="button button-write">Написать в VK</button>
         <a href="#" class="button button-top-menu">Главная</a>-->
 
-        <div id="modal-popup" class="mfp-hide zoom-anim-dialog"></div>
+        <div id="modal-popup" class="mfp-hide zoom-anim-dialog popup">
+             <form action="">
+                <p><span>Оставьте заявку</span>и мы вам перезвоним!</p>
+                <input type="text" name="name" placeholder="Ваше имя" required="">
+                <input type="text" name="phone" placeholder="Телефон" required="">
+                <input type="text" name="time" placeholder="Удобное время для звонка">
+
+                <button class="button button-order-slider">Оставить заявку</button>
+            </form>
+        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
