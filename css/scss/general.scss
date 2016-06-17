@@ -390,6 +390,10 @@ nav ul {
                     vertical-align: middle;
                     height: 100%;
                 }
+                i {
+                    display: inline-block;
+                    margin-right: 20px;
+                }
                 /*.................media.............*/
                 @include m1000 {
                     margin: 0 auto;
