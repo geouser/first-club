@@ -54,26 +54,32 @@ header {
     @include transition(all, .4s);
     
         /*.................media.............*/
-        @include m800 {
+        @include m1000 {
             @include position(fixed, 0, auto, auto, -100%);
+            background-color: rgb(255, 24, 4);
             width: 260px !important;
             height: 100%;
             text-align: center;
-            background-color: #fff;
             margin-top: 0;
             padding: 20px 0;
             z-index: 100;
              
             &.active { left: 0;}
-            .wrapper {
-                   @include flexDirection(column);
-                   width: 100%;
+
+            .logo img{
+                width: 100%;
             }
         }
         /*.............end media..............*/
         
     .wrapper {
          @include flex();
+            /*.................media.............*/
+            @include m1000 {
+               @include flexDirection(column);
+               width: 100%;
+            }
+            /*.............end media..............*/
     }
 }
 
@@ -91,6 +97,25 @@ header {
 
 /* ------------------------------------ */
 /*  NAV STYLES  */
+
+@media (min-width: 1000px) {
+    nav.hasScrolled {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(255, 24, 4, .95);
+        transition: all .2s;
+        -webkit-transition: all .2s;
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0, .4);
+                box-shadow: 0 0 10px rgba(0,0,0, .4);
+        ul {
+            width: 600px;
+            margin: 0 auto;
+            padding: 5px 0;
+        }
+    }    
+}
 
 nav ul {
     @include flex();
@@ -114,7 +139,7 @@ nav ul {
     }
 
         /*.................media.............*/
-        @include m800 { 
+        @include m1000 { 
             display: block;
             height: 100%;
             overflow: scroll;
@@ -136,11 +161,11 @@ nav ul {
     display: none;
     width: 50px;
     height: 50px;
-    @include position(fixed, 15px, 15px, auto, auto);
+    @include position(fixed, 15px, 7px, auto, auto);
     margin: auto; 
     cursor: pointer;
     z-index: 100;
-    background-color: salmon;
+    background-color: rgba(255, 24, 4, 1);
     border: none;
     -webkit-border-radius: 4px;
             border-radius: 4px;
@@ -165,7 +190,7 @@ nav ul {
     &.active .middle_line  {   width: 0; left: 50%;}
 
         /*.................media.............*/
-        @include m800 {
+        @include m1000 {
             display: block;
         }
         /*..............end media.............*/
@@ -186,6 +211,23 @@ nav ul {
     padding: 160px 0 0 0;
     position: relative;
     overflow: hidden;
+    /*.................media.............*/
+    @include m1000 {
+        height: 580px;
+        padding-top: 60px;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0, .3);
+            z-index: 0;
+        }
+    }
+    /*.............end media..............*/
     .after {
         width: 1px;
         position: absolute;
@@ -205,6 +247,8 @@ nav ul {
 .offer__slider {
     width: 100%;
     height: 100%;
+    position: relative;
+    z-index: 2;
     .slick-list {
         height: 100%;
     }
@@ -215,18 +259,43 @@ nav ul {
     &__slide {
         position: relative !important;
         text-align: right;
+        /*.................media.............*/
+        @include m400 {
+           text-align: center;
+        }
+        /*.............end media..............*/
         img {
-            @include position(absolute, auto, auto, -85px, 0);
+            @include position(absolute, auto, auto, -90px, 0);
             z-index: 1;
         }
         &:nth-of-type(1) img {
             @include position(absolute, auto, auto, -193px, -77px);
+            /*.................media.............*/
+            @include m900 {
+                bottom: -125px;
+                width: 500px;
+            }
+            @include m700 {
+                left: -100px;
+            }
+            @include m400 {
+              left: -130px;
+            }
+            /*.............end media..............*/
         }
         &:nth-of-type(2) img {
-            
+            @include m700 {
+              width: 360px;
+              left: -50px;
+            }
         }
         &:nth-of-type(3) img {
             @include position(absolute, auto, auto, -100px, -77px);
+            @include m700 {
+              width: 400px;
+              left: -180px;
+              bottom: -120px;
+            }
         }
         &__info {
             min-width: 520px;
@@ -235,6 +304,9 @@ nav ul {
             text-align: center;
             position: relative;
             z-index: 2;
+            @include m900 {
+                min-width: auto;            
+            }
             h2 {
                 font: 48px/60px $g;
                 color: $yellow;
@@ -243,6 +315,32 @@ nav ul {
                     display: block;
                     font-size: 56px;
                 }
+                /*.................media.............*/
+                @include m900 {
+                   font: 42px/50px $g;
+                   span {
+                       font-size: 48px;
+                   }
+                }
+                @include m700 {
+                   font: 36px/45px $g;
+                   span {
+                       font-size: 42px;
+                   }
+                }
+                @include m500 {
+                   font: 32px/40px $g;
+                   span {
+                       font-size: 36px;
+                   }
+                }
+                @include m360 {
+                   font: 26px/35px $g;
+                   span {
+                       font-size: 30px;
+                   }
+                }
+                /*.............end media..............*/
             }
             .offer__slider__quote {
                 display: block;
@@ -269,6 +367,22 @@ nav ul {
                     vertical-align: middle;
                     height: 100%;
                 }
+                /*.................media.............*/
+                @include m1000 {
+                    margin: 0 auto;
+                    font: 38px $g;
+                }
+                @include m700 {
+                   font-size: 34px;
+                   text-align: center;
+                }
+                @include m500 {
+                   font-size: 28px;
+                   width: 206px;
+                    height: 176px;
+                    background-size: 100% 100%;
+                }
+                /*.............end media..............*/
             }
             .button {
                 margin-top: 20px;
@@ -278,6 +392,11 @@ nav ul {
         &:nth-of-type(3)  {
             .offer__slider__quote {
                 margin: -8px auto 0;
+                /*.................media.............*/
+                @include m1000 {
+                    margin: 0 auto;
+                }
+                /*.............end media..............*/
             }
         }
     }
@@ -293,7 +412,27 @@ nav ul {
     @include flex($alignI: top);
     background-image: url("../images/5.png");
     background-repeat: no-repeat;
-    background-position: 50% 0%;
+    background-position: 50% 100%;
+    padding-bottom: 70px;
+    position: relative;
+    .before {
+        display: block;
+        width: 300px;
+        height: 130px;
+        position: absolute;
+        background-color: transparent;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-image: url("../images/sky.png");
+        background-size: 100% 100%;
+        font: 50px $g;
+        color: $red;
+        background-repeat: no-repeat;
+        top: -86px;
+        padding-top: 15px;
+        text-shadow: 2.121px 2.121px 0px rgb( 0, 0, 0 );
+    }
     &__item {
         width: 340px;
         h3 {
@@ -313,15 +452,25 @@ nav ul {
 /*  PROGRAMS  */ 
 
 .chooseProgram {
-    
+     background-image: url("../images/programs.png");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    margin-top: -60px;
+    padding-top: 130px;
+    padding-bottom: 40px;
+    position: relative;
+    z-index: 2;
 }
 
 .programs {
-    @include flex($alignI: top, $wrap: wrap);
+    width: 110%;
+    margin-left: -5%;
+    @include flex($alignI: top, $wrap: wrap, $justify: space-around);
     &__item {
         width: 170px;
         height: 115px;
         padding-top: 25px;
+        margin: 30px 17px 0;
         &:before {
             display: inline-block;
             vertical-align: middle;
@@ -331,6 +480,14 @@ nav ul {
         span {
             display: inline-block;
             vertical-align: middle;
+            font: 12px $d;
+            color: #FFF;
+            text-transform: uppercase;
+        }
+        &:hover {
+            span {
+                color: $yellow;   
+            }
         }
     }
 }
