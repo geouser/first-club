@@ -96,6 +96,21 @@ jQuery(document).ready(function($) {
         removalDelay: 300,
         mainClass: 'my-mfp-slide-bottom'
     });
+    
+    $('.gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'mfp-img-mobile',
+        fixedContentPos: false,
+        fixedBgPos: true,
+        overflowY: 'auto',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		}
+	});
 
 
      /*---------------------------
@@ -108,6 +123,7 @@ jQuery(document).ready(function($) {
     
     $('.slider').slick({
         dots: false,
+        arrows: false,
         infinite: true,
         slidesToShow: 6,
         slidesToScroll: 1,
