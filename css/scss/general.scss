@@ -616,6 +616,67 @@ nav ul {
 
 
 
+
+.scheduleBlock {
+    background: #f2f2f2;
+    width: 100%;
+    overflow-x: auto;
+    margin: 40px auto;
+}
+
+.scheduleBlock .cellsBlock {
+    display: table
+}
+
+.scheduleBlock .cellsBlock .header {
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 0 0 1px #b1b1b1;
+    border-top: 1px solid #cac5c5
+}
+
+.scheduleBlock .cellsBlock .row {
+    margin-right: 0;
+    margin-left: 0
+}
+
+.scheduleBlock .cellsBlock .cell {
+    width: 160px;
+    min-width: 105px;
+    color: #000;
+    display: table-cell;
+    padding: 10px;
+    vertical-align: top;
+    border-top: 1px solid #faf9f9;
+    border-bottom: 1px solid #cac5c5
+}
+
+.schedule .cellsBlock .cell.dark {
+    background: #eae9e9
+}
+
+.scheduleBlock .cellsBlock .cell.label {
+    width: 56px;
+    font-size: 13px;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 15px;
+    font-weight: 700;
+}
+
+.scheduleBlock .cellsBlock .cell .tooltipstered {
+    display: inline-block;
+    font-size: 14px;
+    margin: 5px 0
+}
+
+.scheduleBlock .cellsBlock .cell .title {
+    color: #00578E;
+}
+
+
+
+
 @import 'schedule';
 @import 'abonement';
 @import 'team';
