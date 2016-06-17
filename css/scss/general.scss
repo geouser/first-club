@@ -127,6 +127,7 @@ header {
         width: 100%;
         left: 0;
         top: 0;
+        z-index: 100;
         background-color: rgba(255, 24, 4, .95);
         transition: all .2s;
         -webkit-transition: all .2s;
@@ -279,6 +280,12 @@ nav ul {
     .slick-track {
         overflow: visible;
     }
+    .slick-arrow {
+        top: 30%;
+        z-index: 10;
+    }
+    .slick-prev {left: 0;}
+    .slick-next {right: 0;}
     &__slide {
         position: relative !important;
         text-align: right;
@@ -672,6 +679,8 @@ nav ul {
 
 .scheduleBlock .cellsBlock .cell .title {
     color: #00578E;
+    font-weight: 700;
+    font-size: 13px;
 }
 
 
