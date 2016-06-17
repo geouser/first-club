@@ -331,3 +331,41 @@ nav ul {
 @import 'gallery';
 @import 'sign-up';
 @import 'footer';
+
+
+.autism-hover, .autism, .dancing-hover, .dancing, .karate-hover, 
+.karate, .acrobatics-hover, .acrobatics, .all-hover, .all, 
+.ballet-hover, .ballet, .basketball-hover, .basketball, .box-hover, 
+.box, .figure-hover, .figure, .fitness-hover, .fitness, 
+.gym-hover, .gym, .parkur-hover, .parkur, .roller-hover, 
+.roller, .yoga-hover, .yoga
+{ display: inline-block; background: url('png.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+ 
+.autism:hover { background-position: -5px -0px; width: 175px; height: 114px; }
+.autism { background-position: -5px -119px; width: 175px; height: 114px; }
+.dancing:hover { background-position: -5px -238px; width: 175px; height: 114px; }
+.dancing { background-position: -5px -357px; width: 175px; height: 114px; }
+.karate:hover { background-position: -5px -476px; width: 175px; height: 114px; }
+.karate { background-position: -5px -595px; width: 175px; height: 114px; }
+.acrobatics:hover { background-position: -5px -714px; width: 174px; height: 113px; }
+.acrobatics { background-position: -5px -832px; width: 174px; height: 113px; }
+.all:hover { background-position: -5px -950px; width: 174px; height: 114px; }
+.all { background-position: -5px -1069px; width: 174px; height: 114px; }
+.ballet:hover { background-position: -5px -1188px; width: 174px; height: 114px; }
+.ballet { background-position: -5px -1307px; width: 174px; height: 114px; }
+.basketball:hover { background-position: -5px -1426px; width: 174px; height: 114px; }
+.basketball { background-position: -5px -1545px; width: 174px; height: 114px; }
+.box:hover { background-position: -5px -1664px; width: 174px; height: 114px; }
+.box { background-position: -5px -1783px; width: 174px; height: 114px; }
+.figure:hover { background-position: -5px -1902px; width: 174px; height: 112px; }
+.figure { background-position: -5px -2019px; width: 174px; height: 112px; }
+.fitness:hover { background-position: -5px -2136px; width: 174px; height: 114px; }
+.fitness { background-position: -5px -2255px; width: 174px; height: 114px; }
+.gym:hover { background-position: -5px -2374px; width: 174px; height: 114px; }
+.gym { background-position: -5px -2493px; width: 174px; height: 114px; }
+.parkur:hover { background-position: -5px -2612px; width: 174px; height: 112px; }
+.parkur { background-position: -5px -2729px; width: 174px; height: 112px; }
+.roller:hover { background-position: -5px -2846px; width: 174px; height: 113px; }
+.roller { background-position: -5px -2964px; width: 174px; height: 113px; }
+.yoga:hover { background-position: -5px -3082px; width: 174px; height: 113px; }
+.yoga { background-position: -5px -3200px; width: 174px; height: 113px; }

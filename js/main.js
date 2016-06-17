@@ -76,7 +76,37 @@ jQuery(document).ready(function($) {
         infinite: true,
         slidesToShow: 6,
         slidesToScroll: 1,
-        lazyLoad: 'ondemand'
+        lazyLoad: 'ondemand',
+        responsive: [
+            {
+                breakpoint: 1300,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
     
     $('.gallery-prev').on('click', function (e){

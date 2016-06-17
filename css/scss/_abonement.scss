@@ -10,10 +10,6 @@
         padding-bottom: 50px;
     }
     
-    h2 {
-        font-size: 55px;
-        color: $yellow;
-    }
     
     &_box {
         @include flex();

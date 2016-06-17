@@ -32,11 +32,25 @@ body {
 	font-family: $c;
 	font-size: 14px;
 }
+section {
+    overflow: hidden;
+}
 h1,
 h2 {
 	font-family: $g;
     text-shadow: 2px 2px 0 #000;
     font-weight: normal;
+}
+h2 {
+    font-size: 55px;
+    color: $yellow;
+    
+    @media ($tablets) {
+        font-size: 50px;
+    }
+    @media ($phones) {
+        font-size: 40px;
+    }
 }
 .white {
 	color: #FFF;
@@ -51,4 +65,13 @@ h2 {
 	width: 990px;
 	margin: 0 auto;
 	text-align: center;
+    
+    @media ($tablets) {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    @media ($phones) {
+        padding: 0 10px;
+    }
 }
