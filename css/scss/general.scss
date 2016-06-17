@@ -335,7 +335,7 @@ nav ul {
             position: relative;
             z-index: 2;
             @include m900 {
-                min-width: auto;            
+                min-width: 0;            
             }
             h2 {
                 font: 48px/60px $g;
