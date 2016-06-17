@@ -58,6 +58,24 @@ jQuery(document).ready(function($) {
     });
 
 
+    var $sections = $('section');
+    $(window).scroll(function(){
+        var currentScroll = $(this).scrollTop();
+        var $currentSection;
+        var windowHalf = $(window).height() / 1.5;
+        
+        $sections.each(function(){
+          var divPosition = $(this).offset().top - windowHalf;
+          
+          if( divPosition - 1 < currentScroll ){
+            $currentSection = $(this);
+          }
+        var id = $currentSection.attr('id');
+          $('a').removeClass('active');
+          $("[href=#"+id+"]").addClass('active');
+        })
+    });
+
 
     /*---------------------------
                                   Magnific popup

@@ -534,7 +534,6 @@ nav ul {
 /*  PROGRAMS  */ 
 
 .chooseProgram {
-     background-image: url("../images/programs.png");
     background-repeat: no-repeat;
     background-position: 50% 0;
     margin-top: -60px;
@@ -542,22 +541,32 @@ nav ul {
     padding-bottom: 40px;
     position: relative;
     z-index: 2;
+     /*.................media.............*/
+    @media (min-width: 1000px) {background-image: url("../images/programs.png");}
+    @include m1000 {
+        background-color: rgb(0, 110, 148);
+        margin-top: 0;
+        padding-top: 40px;
+    }
+    /*.............end media..............*/
 }
 
 .programs {
     width: 110%;
     margin-left: -5%;
-    @include flex($alignI: top, $wrap: wrap, $justify: space-around);
+    @include flex($alignI: top, $wrap: wrap, $justify: center);
     &__item {
         width: 170px;
         height: 115px;
         padding-top: 25px;
-        margin: 30px 17px 0;
+        margin: 30px 15px 0;
+        background: url('../images/program-icons.png') no-repeat;
         &:before {
             display: inline-block;
             vertical-align: middle;
             height: 100%;
             content: "";
+            margin-right: -3px;
         }
         span {
             display: inline-block;
@@ -565,6 +574,7 @@ nav ul {
             font: 12px $d;
             color: #FFF;
             text-transform: uppercase;
+            max-width: 96%;
         }
         &:hover {
             span {
@@ -574,22 +584,6 @@ nav ul {
     }
 }
 
-
-@import 'shedule';
-@import 'abonement';
-@import 'team';
-@import 'gallery';
-@import 'sign-up';
-@import 'footer';
-
-
-.autism-hover, .autism, .dancing-hover, .dancing, .karate-hover, 
-.karate, .acrobatics-hover, .acrobatics, .all-hover, .all, 
-.ballet-hover, .ballet, .basketball-hover, .basketball, .box-hover, 
-.box, .figure-hover, .figure, .fitness-hover, .fitness, 
-.gym-hover, .gym, .parkur-hover, .parkur, .roller-hover, 
-.roller, .yoga-hover, .yoga
-{ display: inline-block; background: url('png.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
  
 .autism:hover { background-position: -5px -0px; width: 175px; height: 114px; }
 .autism { background-position: -5px -119px; width: 175px; height: 114px; }
@@ -619,3 +613,11 @@ nav ul {
 .roller { background-position: -5px -2964px; width: 174px; height: 113px; }
 .yoga:hover { background-position: -5px -3082px; width: 174px; height: 113px; }
 .yoga { background-position: -5px -3200px; width: 174px; height: 113px; }
+
+
+@import 'shedule';
+@import 'abonement';
+@import 'team';
+@import 'gallery';
+@import 'sign-up';
+@import 'footer';
