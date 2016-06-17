@@ -11,10 +11,19 @@
     
     &_box {
         padding-top: 50px;
-        @include flex($alignI: flex-start);
+        @include flex($alignI: flex-start, $wrap: wrap, $justify: space-around);
         
         .item {
             width: 186px;
+            
+            @media ($tablets) {
+                width: 250px;
+                margin-bottom: 40px;
+            }
+            
+            @media (max-width: 550px) {
+                width: 195px;
+            }
             
             .image {
                 position: relative;
@@ -51,6 +60,7 @@
             }
             
             .button {
+                
                 i {
                     background-image: url(../images/vk.png);
                     background-repeat: no-repeat;
