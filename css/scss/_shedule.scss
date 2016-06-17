@@ -5,5 +5,16 @@
     
     p {
         text-align-last: center;
+        margin-top: 10px;
+    }
+    
+    .button {
+        @media (max-width: 550px) {
+            width: 300px;
+            background-image: unset;
+            border: 3px solid #000;
+            border-radius: 10px;
+            font-size: 15px;
+        }
     }
 }
