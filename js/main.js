@@ -15,16 +15,31 @@ jQuery(document).ready(function($) {
                                   ADD CLASS ON SCROLL
     ---------------------------*/
     $(function() { 
-        var $document = $(document),
-            $element = $('.menu-button'),
-            $element2 = $('header'),
-            className = 'hasScrolled';
+      var $document = $(document),
+          $element = $('nav'),
+          className = 'hasScrolled';
 
-        $document.scroll(function() {
-            $element.toggleClass(className, $document.scrollTop() >= 1);
-            $element2.toggleClass(className, $document.scrollTop() >= 1);
-        });
+      $document.scroll(function() {
+        $element.toggleClass(className, $document.scrollTop() >= 200);
+      });
     });
+
+    $('nav a').click(function() {
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top
+        }, 800);
+
+      $('.menu-button').removeClass('active');
+      $('header').removeClass('active');
+      if ($('header').hasClass('active')) {
+          $('body').css('overflow', 'hidden');
+        } else {
+          $('body').css('overflow', 'visible');
+          $('section').css('filter', 'blur(0px)');
+        }
+        return false;
+    });
+
 
     /*---------------------------
                                   MENU TOGGLE
@@ -34,10 +49,12 @@ jQuery(document).ready(function($) {
         $(this).toggleClass('active');
         $(this).siblings('header').toggleClass('active');
         if ($('header').hasClass('active')) {
-                $('body, html').css('overflow', 'hidden');
-            } else {
-                $('body, html').css('overflow', 'visible');
-            }
+            $('body').css('overflow', 'hidden');
+            $('section').css('filter', 'blur(2px)');
+        } else {
+            $('body').css('overflow', 'visible');
+            $('section').css('filter', 'blur(0px)');
+        }
     });
 
 
