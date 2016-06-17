@@ -7,4 +7,27 @@
     nav ul a {
         color: #000;
     }
+    
+    @media ($tablets) {
+        width: 100%!important;
+        height: auto!important;
+        
+        .wrapper {
+            display: block;
+        }
+        
+        .logo {
+            display: block;
+            margin: 0 auto;
+        }
+        
+        nav ul {
+            display: block;
+            
+            li {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
 }

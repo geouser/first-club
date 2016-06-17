@@ -61,14 +61,26 @@
         top: 0;
         left: calc(50% - 495px); //(100%-wrapper)/2
         
+        @media ($tablets) {
+            left: 0;
+        }
+        
         .slick-arrow {
             z-index: 200;
         }
         .slick-prev {
             left: 0;
+            
+            @media ($tablets) {
+                left: 20px;
+            }
         }
         .slick-next {
             right: 0;
+            
+            @media ($tablets) {
+                right: 20px;
+            }
         }
     }
     
