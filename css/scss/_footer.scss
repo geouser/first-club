@@ -36,3 +36,61 @@
         }
     }
 }
+
+.map {
+	padding: 60px 0 100px;
+	background-color: #ccc;
+    text-align: center;
+
+	&__address {
+		width: 395px;
+		background-color: #fff;
+		margin: 0 auto;
+		position: relative;
+		text-align: center;
+		color: #000;
+		padding: 30px 20px;
+  		filter: drop-shadow(0px 9px 27px rgba(0, 0, 0, .23));
+  		border-radius: 5px;
+
+  		@media (max-width: 500px) {
+  			width: 100%;
+  		}
+
+  		&:after {
+  			content: '';
+  			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 20px 18.5px 0 18.5px;
+			border-color: #fff transparent transparent transparent;
+			position: absolute;
+			left: 50%;
+			margin-left: -18.5px;
+			top: 100%;
+  		}
+        
+        p {
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+		.logo {
+			width: 160px;
+			display: inline-block;
+			margin-bottom: 5px;
+		}
+
+		.phone {
+			font-size: 25px;
+			margin-bottom: 15px;
+			display: inline-block;
+            text-align: center;
+		}
+
+		address {
+			font-style: normal;
+			font-size: 18px;
+		}
+	}
+}
